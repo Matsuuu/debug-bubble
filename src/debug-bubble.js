@@ -6,7 +6,8 @@ export class DebugBubble extends HTMLElement {
 
         this.attachShadow({ mode: "open" });
         this.shadowRoot.innerHTML = `
-            <p>Debug</p>
+            <h2>Debug</h2>
+            <p>Something happened over here</p>
         `;
 
         this.shadowRoot.adoptedStyleSheets = [Styles];
