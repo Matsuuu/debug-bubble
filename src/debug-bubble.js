@@ -6,7 +6,7 @@ export class DebugBubble extends HTMLElement {
 
         this.attachShadow({ mode: "open" });
         this.shadowRoot.innerHTML = `
-            <button onclick="this.parentNode.host.remove()">X</button>
+            <button onclick="this.parentNode.host.removeBubble()">X</button>
             <h2>Debug</h2>
             <p>Something happened over here</p>
         `;
@@ -14,9 +14,19 @@ export class DebugBubble extends HTMLElement {
         this.shadowRoot.adoptedStyleSheets = [Styles];
     }
 
-    attributeChangedCallback(name, oldValue, newValue) { }
+    connectedCallback() {
+        const timeout = parseInt(this.getAttribute("message-timeout")) || 5;
+        setTimeout(() => {
+            this.removeBubble();
+        }, timeout * 1000);
+    }
 
-    observedAttributes() {
-        return [];
+    removeBubble() {
+        const padding = 16;
+        this.style.setProperty("--bubble-height", this.clientHeight - 16 + "px");
+        this.setAttribute("closing", "");
+        this.addEventListener("animationend", () => {
+            this.remove();
+        })
     }
 }
