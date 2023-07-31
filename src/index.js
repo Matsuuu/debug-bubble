@@ -29,7 +29,7 @@ export function debugBubble(title, message, timeout = 5) {
     container.prepend(bubble);
 
     if (getBubbleCount() > 4) {
-        getOldestBubble()?.removeBubble();
+        /** @type {DebugBubble} */ (getOldestBubble())?.removeBubble();
     }
 }
 
