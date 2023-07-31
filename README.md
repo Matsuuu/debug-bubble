@@ -16,13 +16,13 @@ npm install debug-bubble
 <script type="importmap">
   {
     "imports": {
-      "debug-bubble": "./node_modules/debug-bubble/src/index.js"
+      "debug-bubble": "https://cdn.jsdelivr.net/npm/debug-bubble/src/bundle.js"
     }
   }
 </script>
 ```
 
-### Call debug bubble
+### Call Debug Bubble
 
 ```javascript
 import { debugBubble } from "debug-bubble";
