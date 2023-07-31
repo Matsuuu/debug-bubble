@@ -6,6 +6,7 @@ export class DebugBubble extends HTMLElement {
 
         this.attachShadow({ mode: "open" });
         this.shadowRoot.innerHTML = `
+            <button onclick="this.parentNode.host.remove()">X</button>
             <h2>Debug</h2>
             <p>Something happened over here</p>
         `;
