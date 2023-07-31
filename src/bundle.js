@@ -40,7 +40,7 @@ var DebugContainer = class extends HTMLElement {
   }
 };
 
-// index.js
+// src/index.js
 function debugBubble(title, message, timeout = 5) {
   if (!customElements.get("debug-bubble")) {
     customElements.define("debug-bubble", DebugBubble);
@@ -54,7 +54,6 @@ function debugBubble(title, message, timeout = 5) {
     document.body.appendChild(container);
   }
   const bubble = document.createElement("debug-bubble");
-  console.log("Foo");
   bubble.setAttribute("message-title", title);
   bubble.setAttribute("message-content", message);
   bubble.setAttribute("message-timeout", timeout.toString());

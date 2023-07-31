@@ -1,5 +1,5 @@
-import { DebugBubble } from "./src/debug-bubble.js";
-import { DebugContainer } from "./src/debug-container.js";
+import { DebugBubble } from "./debug-bubble.js";
+import { DebugContainer } from "./debug-container.js";
 
 /**
  * @param { string } title
