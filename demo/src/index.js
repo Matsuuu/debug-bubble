@@ -9,9 +9,4 @@ function spawn(delay) {
     }, delay * 1000);
 }
 
-debugBubble("Debug", "Something happened over here", 9999);
-debugBubble("Debug", "Something happened over here", 9999);
-debugBubble("Debug", "Something happened over here", 9999);
-spawn(3);
-
 router.start();

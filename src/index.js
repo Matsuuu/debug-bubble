@@ -41,5 +41,5 @@ function getBubbleCount() {
 
 function getOldestBubble() {
     const container = document.querySelector("debug-container");
-    return [...container?.querySelectorAll("debug-bubble")].at(-1);
+    return [...container?.querySelectorAll("debug-bubble:not([closing])")].at(-1);
 }
