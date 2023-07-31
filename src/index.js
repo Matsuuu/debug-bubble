@@ -1,5 +1,5 @@
-import { DebugBubble } from "./debug-bubble.js";
-import { DebugContainer } from "./debug-container.js";
+import { DebugBubble } from "./src/debug-bubble.js";
+import { DebugContainer } from "./src/debug-container.js";
 
 /**
  * @param { string } title
@@ -21,7 +21,6 @@ export function debugBubble(title, message, timeout = 5) {
     }
 
     const bubble = document.createElement("debug-bubble");
-    console.log("Foo");
 
     bubble.setAttribute("message-title", title);
     bubble.setAttribute("message-content", message);

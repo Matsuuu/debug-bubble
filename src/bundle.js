@@ -40,7 +40,7 @@ var DebugContainer = class extends HTMLElement {
   }
 };
 
-// src/index.js
+// index.js
 function debugBubble(title, message, timeout = 5) {
   if (!customElements.get("debug-bubble")) {
     customElements.define("debug-bubble", DebugBubble);
