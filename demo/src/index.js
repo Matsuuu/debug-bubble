@@ -1,4 +1,6 @@
 import { router } from "./routing/router";
-import "debug-bubble";
+import { debugBubble } from "debug-bubble";
+
+debugBubble("foo");
 
 router.start();

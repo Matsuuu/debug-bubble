@@ -4,8 +4,6 @@ export class DebugBubble extends HTMLElement {
     constructor() {
         super();
 
-        console.log(Styles);
-
         this.attachShadow({ mode: "open" });
         this.shadowRoot.innerHTML = `
             <p>Debug</p>
@@ -14,13 +12,9 @@ export class DebugBubble extends HTMLElement {
         this.shadowRoot.adoptedStyleSheets = [Styles];
     }
 
-    attributeChangedCallback(name, oldValue, newValue) {
-
-    }
+    attributeChangedCallback(name, oldValue, newValue) { }
 
     observedAttributes() {
         return [];
     }
 }
-
-customElements.define("debug-bubble", DebugBubble);
