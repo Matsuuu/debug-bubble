@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "debug-bubble": "file:..",
     "lit": "^2.7.5",
     "suunta": "^1.0.2"
   },
