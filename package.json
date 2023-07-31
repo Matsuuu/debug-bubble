@@ -1,6 +1,6 @@
 {
   "name": "debug-bubble",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "",
   "module": "src/bundle.js",
   "main": "src/bundle.js",
