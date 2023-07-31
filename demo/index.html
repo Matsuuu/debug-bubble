@@ -5,13 +5,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <script type="importmap">
+      {
+        "imports": {
+          "debug-bubble": "https://cdn.jsdelivr.net/npm/debug-bubble/src/bundle.js"
+        }
+      }
+    </script>
+
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
       html,
       body {
         height: 100%;
         width: 100%;
         margin: 0;
         padding: 0;
+        font-family: "Rubik", sans-serif;
       }
       body {
         background-color: #4158d0;
@@ -22,12 +32,24 @@
           #ffcc70 100%
         );
         background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      h2 {
+        color: #fff;
       }
     </style>
   </head>
   <body>
-    <suunta-view></suunta-view>
+    <h2>Press any key to trigger a debug bubble</h2>
+    <script type="module">
+      import { debugBubble } from "debug-bubble";
 
-    <script type="module" src="src/index.js"></script>
+      window.addEventListener("keydown", (e) => {
+        console.log("Pressed button ", e.key);
+        debugBubble("Key pressed!", "You pressed the key " + e.key);
+      });
+    </script>
   </body>
 </html>
