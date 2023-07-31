@@ -19,8 +19,11 @@
   },
   "homepage": "https://github.com/Matsuuu/debug-bubble#readme",
   "files": [
-    "./src"
+    "src/bundle.js",
+    "src/*.css",
+    "src/*.d.ts"
   ],
+  "types": "src/index.d.ts",
   "devDependencies": {
     "esbuild": "^0.18.17"
   }
