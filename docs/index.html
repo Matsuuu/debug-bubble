@@ -5,12 +5,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script type="importmap">
+    <script>
+      const script = document.createElement("script");
+      script.type = "importmap";
+      const url = location.hostname === "localhost" ? "../src/bundle.js" : "https://cdn.jsdelivr.net/npm/debug-bubble/src/bundle.js";
+      script.innerHTML = `
       {
         "imports": {
-          "debug-bubble": "https://cdn.jsdelivr.net/npm/debug-bubble/src/bundle.js"
+          "debug-bubble": "${url}"
         }
       }
+      `;
+      document.head.appendChild(script);
+
     </script>
 
     <style>

@@ -5,7 +5,10 @@
   "module": "src/bundle.js",
   "main": "src/bundle.js",
   "scripts": {
-    "build": "esbuild src/index.js --bundle --format=esm --external:*.css --outfile=src/bundle.js"
+    "build": "esbuild src/index.js --bundle --format=esm --external:*.css --outfile=src/bundle.js",
+    "watch": "npm run build -- --watch",
+    "serve": "web-dev-server --open --watch --app-index docs/index.html",
+    "start": "concurrently \"npm run watch\" \"npm run serve\""
   },
   "repository": {
     "type": "git",
@@ -19,12 +22,12 @@
   },
   "homepage": "https://github.com/Matsuuu/debug-bubble#readme",
   "files": [
-    "src/bundle.js",
-    "src/*.css",
-    "src/*.d.ts"
+    "src"
   ],
   "types": "src/index.d.ts",
   "devDependencies": {
-    "esbuild": "^0.18.17"
+    "esbuild": "^0.18.17",
+    "concurrently": "^8.2.0",
+    "@web/dev-server": "^0.2.3"
   }
 }
